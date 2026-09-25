@@ -1,0 +1,403 @@
+:root {
+  --bg: #07090d;
+  --panel: #0e1219;
+  --panel2: #121823;
+  --text: #f4f7fb;
+  --muted: #8993a3;
+  --line: #202733;
+  --green: #55e39a;
+  --red: #ff6f7d;
+  --blue: #76a9ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 80% 0%, #18233a 0, transparent 32rem),
+    var(--bg);
+  color: var(--text);
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 20px;
+  background: rgba(7,9,13,.86);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  font-size: 19px;
+  font-weight: 900;
+  letter-spacing: .08em;
+}
+
+.subtitle {
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.live {
+  color: var(--green);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.live span {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-right: 5px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 12px var(--green);
+}
+
+main {
+  width: min(1050px, 100%);
+  margin: auto;
+  padding: 38px 20px 70px;
+}
+
+.hero {
+  max-width: 700px;
+  padding: 22px 0 34px;
+}
+
+.eyebrow {
+  color: var(--blue);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .16em;
+}
+
+h1 {
+  margin: 10px 0;
+  font-size: clamp(36px, 9vw, 68px);
+  line-height: .98;
+  letter-spacing: -.045em;
+}
+
+.hero p,
+.how p {
+  max-width: 600px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 42px;
+}
+
+.stat {
+  padding: 16px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+
+.stat span {
+  display: block;
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .12em;
+}
+
+.stat strong {
+  display: block;
+  margin-top: 7px;
+  font-size: 22px;
+}
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 15px;
+}
+
+h2 {
+  margin: 5px 0 0;
+  font-size: 25px;
+  letter-spacing: -.03em;
+}
+
+button {
+  border: 1px solid #33415a;
+  background: #172033;
+  color: white;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-weight: 800;
+}
+
+.markets {
+  display: grid;
+  gap: 10px;
+}
+
+.market {
+  padding: 16px;
+  background: linear-gradient(145deg, var(--panel2), var(--panel));
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+
+.market-main {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.company {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.logo {
+  width: 42px;
+  height: 42px;
+  border-radius: 11px;
+  object-fit: cover;
+  background: #202733;
+}
+
+.symbol {
+  font-weight: 900;
+}
+
+.name {
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.price {
+  text-align: right;
+}
+
+.token-price {
+  font-weight: 900;
+}
+
+.premium {
+  margin-top: 4px;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.positive {
+  color: var(--green);
+}
+
+.negative {
+  color: var(--red);
+}
+
+.details {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+  margin-top: 15px;
+  padding-top: 13px;
+  border-top: 1px solid var(--line);
+}
+
+.detail span {
+  display: block;
+  color: var(--muted);
+  font-size: 9px;
+  text-transform: uppercase;
+}
+
+.detail strong {
+  display: block;
+  margin-top: 3px;
+  font-size: 12px;
+}
+
+.how {
+  margin-top: 50px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--panel);
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.loading {
+  color: var(--muted);
+  padding: 30px 0;
+}
+
+@media (max-width: 600px) {
+  .stats {
+    gap: 7px;
+  }
+
+  .stat {
+    padding: 12px 10px;
+  }
+
+  .stat strong {
+    font-size: 18px;
+  }
+
+  .details {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.intelligence {
+  margin-top: 14px;
+  padding: 13px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: rgba(118,169,255,.045);
+}
+
+.intel-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.intel-label {
+  display: block;
+  color: var(--muted);
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: .13em;
+}
+
+.intel-top strong {
+  display: block;
+  margin-top: 3px;
+  font-size: 12px;
+}
+
+.score {
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.scorebar {
+  height: 4px;
+  margin-top: 10px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #202733;
+}
+
+.scorebar div {
+  height: 100%;
+  border-radius: inherit;
+  background: var(--blue);
+}
+
+.intelligence p {
+  margin: 9px 0 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.pyth-section {
+  margin: 28px 0;
+}
+
+.pyth-section .section-head {
+  margin-bottom: 14px;
+}
+
+.eyebrow {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  opacity: 0.55;
+  margin-bottom: 4px;
+}
+
+.live-dot,
+.pyth-live {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.pyth-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.pyth-card {
+  padding: 16px;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  background: rgba(255,255,255,0.035);
+}
+
+.pyth-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.pyth-symbol {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.pyth-live {
+  opacity: 0.55;
+}
+
+.pyth-price {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.pyth-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 8px;
+  font-size: 10px;
+  opacity: 0.55;
+}
+
+@media (max-width: 480px) {
+  .pyth-grid {
+    grid-template-columns: 1fr;
+  }
+}

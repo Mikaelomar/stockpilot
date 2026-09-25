@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>StockPilot — Tokenized Stock Intelligence</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <div class="brand">STOCKPILOT</div>
+      <div class="subtitle">Tokenized Stock Intelligence</div>
+    </div>
+    <div class="live"><span></span> LIVE</div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow">SOLANA • PRESTOCKS</div>
+      <h1>See where tokenized stocks diverge.</h1>
+      <p>Real-time market intelligence for 24/7 private-market assets.</p>
+    </section>
+
+    <section class="stats">
+      <div class="stat">
+        <span>MARKETS</span>
+        <strong id="marketCount">—</strong>
+      </div>
+      <div class="stat">
+        <span>TOP PREMIUM</span>
+        <strong id="topPremium">—</strong>
+      </div>
+      <div class="stat">
+        <span>TOP DISCOUNT</span>
+        <strong id="topDiscount">—</strong>
+      </div>
+    </section>
+
+    <section class="section-head">
+      <div>
+        <div class="eyebrow">MARKET SCANNER</div>
+        <h2>Live Divergence</h2>
+      </div>
+      <button id="refresh">Refresh</button>
+    </section>
+
+    <section class="pyth-section">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">PYTH NETWORK</span>
+          <h2>Market Pulse</h2>
+        </div>
+        <span class="live-dot">LIVE</span>
+      </div>
+
+      <div id="pythPulse" class="pyth-grid">
+        <div class="loading">Loading Pyth data...</div>
+      </div>
+    </section>
+
+    <section id="markets" class="markets">
+      <div class="loading">Loading markets...</div>
+    </section>
+
+    <section class="how">
+      <div class="eyebrow">HOW IT WORKS</div>
+      <h2>One market. Two prices.</h2>
+      <p>
+        StockPilot compares the PreStocks mark price with the live token
+        price and surfaces the resulting market divergence.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <span>StockPilot</span>
+    <span>Built on Solana</span>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>

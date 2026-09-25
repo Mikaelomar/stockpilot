@@ -1,0 +1,3 @@
+StockPilot
+==========
+Separate hackathon project
