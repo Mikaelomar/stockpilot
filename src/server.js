@@ -1,7 +1,7 @@
 import "dotenv/config";
 import http from "node:http";
 import { readFile } from "node:fs/promises";
-import { extname, join } from "node:path";
+import { dirname, extname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { analyzeDivergence } from "./divergence.js";
 import { getPythMarkets } from "./pyth.js";
@@ -11,7 +11,7 @@ const HOST = "0.0.0.0";
 const PRESTOCKS_API = "https://prestocks.com/api/prestocks";
 
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = join(__filename, "..");
+const __dirname = dirname(__filename);
 const publicDir = join(__dirname, "..", "public");
 
 function round(value, decimals = 2) {
